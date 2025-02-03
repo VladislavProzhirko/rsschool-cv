@@ -1,12 +1,14 @@
 :root {
     --background-img-container-page: url('/assets/images/start-screen-background.jpg');
     --color-primary: #F1CDB3;
+    --color-primary-light: #fddcc4;
     --color-light-xl: #fff;
     --color-dark-s: #cdcdcd;
     --color-dark-l: #545454;
     --color-dark-xl: #4C4C4C;
     --color-dark-3xl: #292929;
     --color-light-s: #fafafa;
+    --color-light-l: #F6F6F6;
 }
 
 body {
@@ -143,18 +145,31 @@ body {
     white-space: nowrap;
 }
 
-.start-screen-content button {
+.btn {
     font-family: Georgia;
     font-size: 17px;
     color: var(--color-dark-3xl);
 
-    width: 207px;
+    /* width: 207px;
     height: 52px;
     margin-top: 42px;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary); */
     padding: 15px 45px;
     border-radius: 100px;
     border-style: none;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+
+    transition: background-color 0.2s linear;
+}
+
+.btn:hover {
+    background-color: var(--color-primary-light);
+}
+
+.start-screen__btn-wrapper {
+    max-width: 208px;
+    margin-top: 40px;
 }
 
 .start-screen-puppy {
@@ -228,7 +243,7 @@ body {
 /*our friends*/
 .our-peats {
     width: 100%;
-    background-color: #F6F6F6;
+    background-color: var(--color-light-l);
 }
 
 .our-peats-wrapper {
@@ -318,17 +333,31 @@ body {
     margin-top: 30px;
 }
 
-.button-cards-slider {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 17px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: var(--color-dark-3xl);
-    border-radius: 100px;
-    border: 1px solid #F1CDB3;
-    padding: 15px 45px;
-    margin-top: 30px;
+.our-peats__btn {
+    margin: 30px 0;
+}
+
+.our-peats-content__btn {
+    max-width: 265px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+/* Модификаторы btn */
+.btn_background-light-s {
     background-color: var(--color-light-s);
+}
+
+.btn_outline {
+    outline: 2px solid #F1CDB3;
+}
+
+.btn_outline:hover {
+    outline: 2px solid var(--color-primary-light);
+}    
+
+.btn_background-primary {
+    background-color: var(--color-primary);
 }
 
 .button-other {
@@ -344,4 +373,177 @@ body {
     padding: 15px 45px;
     margin: auto;
     margin-top: 60px;
+}
+
+
+/*help*/
+
+.help {
+    width: 100%;
+    height: 611px;
+    background-color: var(--color-light-xl);
+    overflow: hidden;
+}
+
+.help__wrapper {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.help__content {
+    margin: 80px 40px 100px 40px;
+}
+
+.help__title {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.08em;
+    color: var(--color-dark-l);
+    margin-bottom: 60px;
+}
+
+.help__list-wrapper {
+    max-width: 1026px;
+    margin: auto;
+}
+
+.help__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.help__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.help__row_space-around {
+    justify-content: space-around;
+}
+
+.help__row_margin {
+    margin-top: 55px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.help__row_space-between {
+    justify-content: space-between;
+}
+
+.help__link {
+    display: block;
+    text-decoration: none;
+}
+
+.help__link-element-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.help__img {
+    display: block;
+    max-width: 60px;
+    max-height: 60px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.help__name-card {
+    display: block;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    margin: 0;
+    color: var(--color-dark-l);
+}
+
+/* Донат */
+.donation {
+    width: 100%;
+    background-color: var(--color-light-l);
+}
+
+.donation__wraper {
+    max-width: 1280px;
+    height: 462px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.donation__content-wraper {
+    max-width: 915px;
+    max-height: 282px;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+}
+
+.donation__img {
+    padding: 10px 0;
+    padding-right: 30px;
+}
+
+.donation__content {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.donation__title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.08em;
+    color: var(--color-dark-l);
+    margin: 0;
+}
+
+.donation__subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+    margin: 0;
+}
+
+.donation__btn {
+    max-width: 350px;
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 9px;
+}
+
+.donation__logo-card {
+    padding-right: 15px
+}
+
+.donation__number-card {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+    margin: 0;
+}
+
+.donation__legal-information {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-dark-l); 
 }
