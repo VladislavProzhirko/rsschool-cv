@@ -1,5 +1,9 @@
 :root {
     --background-img-container-page: url('/assets/images/start-screen-background.jpg');
+    --footer-puppy: url('/assets/images/footer-puppy.png');
+    --icon-email: url('/assets/images/icon-email.svg');
+    --icon-phone: url('/assets/images/icon-phone.svg');
+    --icon-marker: url('/assets/images/icon-marker.svg');
     --color-primary: #F1CDB3;
     --color-primary-light: #fddcc4;
     --color-light-xl: #fff;
@@ -35,7 +39,6 @@ body {
 
 .start-header {
     width: 100%;
-    /*background: ;*/
     background-image: var(--background-img-container-page), radial-gradient(ellipse, #5B483A, #262425);    
     background-size: 100%;
 }
@@ -546,4 +549,73 @@ body {
     font-size: 12px;
     line-height: 18px;
     color: var(--color-dark-l); 
+}
+
+/* Подвал */
+.footer {
+    width: 100%;
+    background-image: var(--background-img-container-page), radial-gradient(ellipse, #5B483A, #262425);    
+    background-size: 100%;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 1280px;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer__content-wrapper {
+    display: flex;
+    flex-basis: 1200px;
+    justify-content: space-between;
+}
+
+.footer__content-wrapper::after {
+    content: '';
+    flex-basis: 300px;
+    margin-top: auto;
+    height: 310px;
+    background-image: var(--footer-puppy);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__address-element {
+    display: flex;
+    align-items: center;
+    
+}
+
+.footer__address-element::before {
+    content: '';
+    display: block;
+    flex-basis: 22px;
+    height: 32px;
+    background-image: var(--icon-marker);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 8px 20px 8px 0;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__contacts-element {
+    display: flex;
+    align-items: center;
+    
 }
