@@ -570,6 +570,7 @@ body {
 .footer__content-wrapper {
     display: flex;
     flex-basis: 1200px;
+    margin-top: 56px;
     justify-content: space-between;
 }
 
@@ -584,38 +585,94 @@ body {
     background-position: center;
 }
 
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 279px;
+}
+
+.footer__title-contacts {
+    margin: 0;
+}
+
+.footer__mail {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 40px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+
+.footer__tel {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 40px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+
 .footer__address {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-basis: 302px;
+}
+
+.footer__title-address {
+    margin: 0;
 }
 
 .footer__address-element {
-    display: flex;
-    align-items: center;
-    
+    color: var(--color-primary);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 40px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
 }
 
-.footer__address-element::before {
+/* Модификаторы */
+.footer_title-font {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-light-xl);
+}
+
+.footer_element-flex {
+    display: flex;
+    align-items: center;
+}
+
+.footer_before-icon::before {
     content: '';
     display: block;
     flex-basis: 22px;
     height: 32px;
-    background-image: var(--icon-marker);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 8px 20px 8px 0;
+    margin-right: 20px;
 }
 
-.footer__contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.footer_before-size::before {
+    flex-basis: 40px;
+    height: 32px;
 }
 
-.footer__contacts-element {
-    display: flex;
-    align-items: center;
-    
+.footer__mail_icon::before{
+    background-image: var(--icon-email);    
 }
+
+.footer__tel_icon::before{
+    background-image: var(--icon-phone);    
+}
+
+.footer__address-element_icon::before{
+    background-image: var(--icon-marker);    
+}
+
